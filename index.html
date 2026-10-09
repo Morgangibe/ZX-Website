@@ -187,8 +187,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
       <p class="lead" data-i18n="k_p">Cuéntanos qué quieres resolver. Te respondemos en menos de 24 horas laborables.</p>
       <a class="mail" href="mailto:info@zxconsulting.solutions">info@zxconsulting.solutions</a>
     </div>
-    <form id="f" action="contact.php" method="post">
-      <input class="hp" name="web" tabindex="-1" autocomplete="off">
+    <form id="f" action="https://formsubmit.co/ajax/info@zxconsulting.solutions" method="post">
+      <input class="hp" name="_honey" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="Nuevo contacto web — ZX Consulting">
+      <input type="hidden" name="_captcha" value="false">
       <input name="name" required data-ph="f1" placeholder="Nombre">
       <input name="email" type="email" required data-ph="f2" placeholder="Email">
       <input name="company" data-ph="f3" placeholder="Empresa">
@@ -243,7 +245,7 @@ document.querySelectorAll('.card').forEach(c=>c.addEventListener('pointermove',e
 // form
 document.getElementById('f').addEventListener('submit',async e=>{e.preventDefault();const f=e.target,s=document.getElementById('msg');s.textContent='…';
  try{const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
-  if(!r.ok)throw 0;s.textContent=T[L].ok;f.reset()}catch(_){s.textContent=T[L].err}});
+  const j=await r.json();if(!r.ok||String(j.success)!=='true')throw 0;s.textContent=T[L].ok;f.reset()}catch(_){s.textContent=T[L].err}});
 </script>
 </body>
 </html>
