@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZX Consulting Solutions — IA y software a medida</title>
+<meta name="description" content="Estudio de IA y software a medida. Agentes de voz, plataformas SaaS, CRMs y automatización para empresas que quieren operar más rápido.">
+<meta property="og:title" content="ZX Consulting Solutions">
+<meta property="og:description" content="Diseñamos y construimos IA y software a medida para empresas.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#05060a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2305060a'/%3E%3Cpath d='M16 18h32L16 46h32' fill='none' stroke='%2300e5ff' stroke-width='6' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05060a;--bg2:#0a0c14;--line:rgba(255,255,255,.08);--tx:#e8ecf5;--mut:#8a93a8;--c1:#00e5ff;--c2:#7c5cff;--c3:#ff4fd8;--grad:linear-gradient(110deg,var(--c1),var(--c2) 55%,var(--c3))}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font:400 17px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.logo{font-family:'Space Grotesk',Inter,sans-serif;letter-spacing:-.02em;line-height:1.05}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:shift 8s linear infinite}
+@keyframes shift{to{background-position:200% center}}
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s}
+nav.sc{background:rgba(5,6,10,.75);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-weight:700;font-size:20px;display:flex;align-items:center;gap:10px}
+.logo i{width:30px;height:30px;border-radius:8px;background:var(--grad);display:grid;place-items:center;color:#05060a;font-style:normal;font-size:15px;font-weight:700}
+.logo small{font-weight:500;color:var(--mut);font-size:13px;letter-spacing:.02em}
+.links{display:flex;gap:30px;align-items:center;font-size:15px;color:var(--mut)}
+.links a:hover{color:var(--tx)}
+.lang{border:1px solid var(--line);background:none;color:var(--tx);border-radius:99px;padding:6px 12px;font:500 13px Inter;cursor:pointer}
+.lang:hover{border-color:var(--c1)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:99px;font-weight:600;font-size:16px;border:0;cursor:pointer;transition:.25s;font-family:Inter}
+.btn.p{background:var(--grad);color:#05060a;box-shadow:0 0 0 0 rgba(0,229,255,.5)}
+.btn.p:hover{transform:translateY(-2px);box-shadow:0 10px 40px -8px rgba(124,92,255,.7)}
+.btn.g{border:1px solid var(--line);color:var(--tx);background:rgba(255,255,255,.03)}
+.btn.g:hover{border-color:var(--c1);background:rgba(0,229,255,.06)}
+@media(max-width:820px){.links a:not(.btn){display:none}}
+/* hero */
+header.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+#net{position:absolute;inset:0;width:100%;height:100%}
+.hero:before{content:"";position:absolute;width:900px;height:900px;left:50%;top:40%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(124,92,255,.22),transparent 62%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.tag{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:99px;padding:7px 16px;font-size:14px;color:var(--mut);margin-bottom:30px}
+.tag b{width:8px;height:8px;border-radius:50%;background:var(--c1);box-shadow:0 0 12px var(--c1);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.3}}
+h1{font-size:clamp(44px,8.2vw,112px);font-weight:700;max-width:1000px}
+.sub{max-width:620px;color:var(--mut);font-size:clamp(18px,2vw,21px);margin:30px 0 40px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.scroll{position:absolute;bottom:28px;left:50%;width:1px;height:48px;background:linear-gradient(var(--c1),transparent);z-index:2;animation:drop 2s infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* marquee */
+.mq{border-block:1px solid var(--line);overflow:hidden;padding:20px 0;background:var(--bg2)}
+.mq div{display:flex;gap:56px;width:max-content;animation:mq 40s linear infinite;color:var(--mut);font:500 15px 'Space Grotesk';letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.mq span:after{content:"✦";margin-left:56px;color:var(--c2)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:130px 0;position:relative}
+.eyebrow{color:var(--c1);font:600 13px 'Space Grotesk';letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}
+h2{font-size:clamp(34px,5vw,64px);font-weight:700;max-width:820px}
+.lead{color:var(--mut);max-width:620px;margin-top:20px}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:60px}
+.card{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:24px;padding:32px;overflow:hidden;transition:border-color .3s,transform .3s}
+.card:before{content:"";position:absolute;inset:0;background:radial-gradient(500px circle at var(--mx,50%) var(--my,0%),rgba(0,229,255,.12),transparent 45%);opacity:0;transition:.3s;pointer-events:none}
+.card:hover{border-color:rgba(0,229,255,.35);transform:translateY(-4px)}
+.card:hover:before{opacity:1}
+.card .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(124,92,255,.14);border:1px solid rgba(124,92,255,.35);margin-bottom:26px;font-size:22px}
+.card h3{font-size:26px;margin-bottom:12px}
+.card p{color:var(--mut);font-size:16px}
+.s2{grid-column:span 2}.s3{grid-column:span 3}.s4{grid-column:span 4}
+@media(max-width:900px){.bento{grid-template-columns:1fr}.s2,.s3,.s4{grid-column:auto}}
+/* cases */
+.cases{margin-top:60px;border-top:1px solid var(--line)}
+.case{display:grid;grid-template-columns:70px 1.1fr 1.4fr auto;gap:30px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line);transition:.3s;cursor:default}
+.case:hover{padding-left:18px;background:linear-gradient(90deg,rgba(124,92,255,.08),transparent)}
+.case .n{font:500 15px 'Space Grotesk';color:var(--mut)}
+.case h3{font-size:clamp(26px,3.2vw,40px)}
+.case p{color:var(--mut);font-size:16px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.chips em{font-style:normal;font-size:12px;border:1px solid var(--line);border-radius:99px;padding:4px 11px;color:var(--mut);white-space:nowrap}
+@media(max-width:900px){.case{grid-template-columns:1fr;gap:10px}.chips{justify-content:flex-start}}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:60px;counter-reset:s}
+.step{padding:30px;border-radius:24px;border:1px solid var(--line);background:var(--bg2);counter-increment:s;position:relative}
+.step:before{content:"0" counter(s);font:700 56px 'Space Grotesk';background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin-bottom:18px}
+.step h3{font-size:22px;margin-bottom:10px}.step p{color:var(--mut);font-size:15px}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}@media(max-width:560px){.steps{grid-template-columns:1fr}}
+/* stack */
+.stack{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.stack span{padding:10px 20px;border:1px solid var(--line);border-radius:99px;color:var(--mut);font-size:15px;background:rgba(255,255,255,.02);transition:.25s}
+.stack span:hover{color:var(--tx);border-color:var(--c2);box-shadow:0 0 24px -6px var(--c2)}
+/* contact */
+.contact{background:var(--bg2);border:1px solid var(--line);border-radius:36px;padding:clamp(30px,6vw,80px);display:grid;grid-template-columns:1fr 1fr;gap:50px;position:relative;overflow:hidden}
+.contact:before{content:"";position:absolute;width:600px;height:600px;right:-200px;top:-250px;background:radial-gradient(circle,rgba(0,229,255,.18),transparent 65%);pointer-events:none}
+form{display:grid;gap:14px;position:relative}
+input,textarea,select{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:15px 18px;color:var(--tx);font:400 16px Inter;outline:0;transition:.2s}
+input:focus,textarea:focus{border-color:var(--c1);box-shadow:0 0 0 4px rgba(0,229,255,.1)}
+textarea{min-height:120px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+#msg{font-size:15px;min-height:22px;color:var(--c1)}
+.mail{margin-top:30px;display:inline-block;font:600 22px 'Space Grotesk';border-bottom:1px solid var(--c2)}
+@media(max-width:900px){.contact{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap nav">
+  <a href="#top" class="logo"><i>ZX</i>ZX Consulting <small>.solutions</small></a>
+  <div class="links">
+    <a href="#services" data-i18n="n1">Servicios</a>
+    <a href="#work" data-i18n="n2">Proyectos</a>
+    <a href="#process" data-i18n="n3">Método</a>
+    <button class="lang" id="lang" aria-label="Language">EN</button>
+    <a href="#contact" class="btn p" style="padding:10px 20px;font-size:15px;color:#05060a" data-i18n="n4">Hablemos</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <canvas id="net"></canvas>
+  <div class="wrap">
+    <div class="tag"><b></b><span data-i18n="tag">Estudio de IA y software a medida</span></div>
+    <h1><span data-i18n="h1a">Convertimos ideas en</span> <span class="grad" data-i18n="h1b">sistemas inteligentes</span></h1>
+    <p class="sub" data-i18n="sub">Diseñamos y construimos agentes de voz, plataformas SaaS y automatización con IA para empresas que quieren operar más rápido, con menos fricción.</p>
+    <div class="cta">
+      <a href="#contact" class="btn p"><span data-i18n="c1">Cuéntanos tu proyecto</span> →</a>
+      <a href="#work" class="btn g" data-i18n="c2">Ver lo que hemos construido</a>
+    </div>
+  </div>
+  <div class="scroll"></div>
+</header>
+
+<div class="mq"><div id="mq"></div></div>
+
+<section id="services"><div class="wrap">
+  <div class="eyebrow rv" data-i18n="s_e">Qué hacemos</div>
+  <h2 class="rv" data-i18n="s_h">Del problema al producto en producción.</h2>
+  <p class="lead rv" data-i18n="s_p">Somos el equipo técnico que tu empresa no tiene que contratar. Estrategia, diseño e ingeniería bajo un mismo techo.</p>
+  <div class="bento">
+    <div class="card s4 rv"><div class="ic">🎙️</div><h3 data-i18n="b1h">Agentes de voz con IA</h3><p data-i18n="b1p">Asistentes telefónicos que atienden llamadas, resuelven dudas, recogen reservas y traspasan a una persona cuando importa. Sin inventar datos, con todo registrado en un panel.</p></div>
+    <div class="card s2 rv"><div class="ic">⚡</div><h3 data-i18n="b2h">Automatización</h3><p data-i18n="b2p">Flujos que eliminan el trabajo repetitivo entre tus herramientas.</p></div>
+    <div class="card s2 rv"><div class="ic">🧩</div><h3 data-i18n="b3h">Plataformas SaaS</h3><p data-i18n="b3p">Productos multi-cliente, multi-idioma y listos para escalar.</p></div>
+    <div class="card s4 rv"><div class="ic">📊</div><h3 data-i18n="b4h">CRMs y paneles a medida</h3><p data-i18n="b4p">Software interno que encaja con tu forma real de trabajar: clientes, obras, archivos, cobros y métricas en un solo sitio, no en diez hojas de cálculo.</p></div>
+    <div class="card s3 rv"><div class="ic">🧠</div><h3 data-i18n="b5h">IA aplicada a tu negocio</h3><p data-i18n="b5p">Transcripción, extracción de datos, clasificación y asistentes que trabajan con tu información, con revisión humana donde hace falta.</p></div>
+    <div class="card s3 rv"><div class="ic">🌍</div><h3 data-i18n="b6h">Web y producto digital</h3><p data-i18n="b6p">Webs rápidas, apps móviles (PWA) y experiencias con diseño cuidado, en varios idiomas desde el primer día.</p></div>
+  </div>
+</div></section>
+
+<section id="work" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow rv" data-i18n="w_e">Proyectos</div>
+  <h2 class="rv" data-i18n="w_h">Construimos nuestros propios productos. Por eso sabemos hacer los tuyos.</h2>
+  <div class="cases">
+    <div class="case rv"><span class="n">01</span><h3>Dintel</h3><p data-i18n="w1">Presupuestos y facturas para constructores y reformistas a partir de una nota de voz. Facturación electrónica europea, empezando por Francia.</p><div class="chips"><em>Voz → Presupuesto</em><em>FR · ES · EN</em><em>Next.js</em></div></div>
+    <div class="case rv"><span class="n">02</span><h3>Hotel Voice Agent</h3><p data-i18n="w2">Agente telefónico para hoteles que atiende lo que recepción no puede coger: dudas, reservas y quejas, con traspaso a humano.</p><div class="chips"><em>Voz IA</em><em>ES · EN · DE</em><em>Supabase</em></div></div>
+    <div class="case rv"><span class="n">03</span><h3>Trainbay</h3><p data-i18n="w3">CRM para entrenadores personales con marca blanca, asistente de ayuda y web de venta propia.</p><div class="chips"><em>SaaS</em><em>Marca blanca</em></div></div>
+    <div class="case rv"><span class="n">04</span><h3>Motortek</h3><p data-i18n="w4">Portal para talleres: gestión de trabajos, deuda por taller, PDFs e integraciones con Google Calendar y Drive.</p><div class="chips"><em>Portal B2B</em><em>PHP · MySQL</em></div></div>
+    <div class="case rv"><span class="n">05</span><h3>HN Performance CRM</h3><p data-i18n="w5">Gestor para un taller de reprogramación de centralitas: archivos por marca, modelo y ECU, versiones y detección automática.</p><div class="chips"><em>Gestión de archivos</em><em>Automatización</em></div></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="eyebrow rv" data-i18n="p_e">Cómo trabajamos</div>
+  <h2 class="rv" data-i18n="p_h">Rápidos, claros y sin humo.</h2>
+  <div class="steps">
+    <div class="step rv"><h3 data-i18n="p1h">Descubrir</h3><p data-i18n="p1p">Entendemos tu negocio, el problema real y qué merece automatizarse.</p></div>
+    <div class="step rv"><h3 data-i18n="p2h">Diseñar</h3><p data-i18n="p2p">Definimos alcance, flujo y prototipo antes de escribir código.</p></div>
+    <div class="step rv"><h3 data-i18n="p3h">Construir</h3><p data-i18n="p3p">Entregas cortas y funcionales. Ves avances reales cada semana.</p></div>
+    <div class="step rv"><h3 data-i18n="p4h">Lanzar y evolucionar</h3><p data-i18n="p4p">Puesta en producción, medición y mejora continua.</p></div>
+  </div>
+  <div class="stack rv"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Supabase</span><span>PostgreSQL</span><span>Claude · LLMs</span><span>Voz IA</span><span>Node.js</span><span>PHP</span><span>PWA</span></div>
+</div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap">
+  <div class="contact rv">
+    <div style="position:relative">
+      <div class="eyebrow" data-i18n="k_e">Contacto</div>
+      <h2 data-i18n="k_h" style="font-size:clamp(32px,4.4vw,56px)">¿Tienes algo en mente?</h2>
+      <p class="lead" data-i18n="k_p">Cuéntanos qué quieres resolver. Te respondemos en menos de 24 horas laborables.</p>
+      <a class="mail" href="mailto:info@zxconsulting.solutions">info@zxconsulting.solutions</a>
+    </div>
+    <form id="f" action="contact.php" method="post">
+      <input class="hp" name="web" tabindex="-1" autocomplete="off">
+      <input name="name" required data-ph="f1" placeholder="Nombre">
+      <input name="email" type="email" required data-ph="f2" placeholder="Email">
+      <input name="company" data-ph="f3" placeholder="Empresa">
+      <textarea name="message" required data-ph="f4" placeholder="¿Qué necesitas?"></textarea>
+      <button class="btn p" type="submit" style="justify-content:center"><span data-i18n="f5">Enviar mensaje</span> →</button>
+      <div id="msg" role="status"></div>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© <span id="y"></span> ZX Consulting LLC · New Mexico, USA</span>
+  <span data-i18n="foot">Hecho con IA y mucho café.</span>
+</div></footer>
+
+<script>
+const T={
+es:{n1:"Servicios",n2:"Proyectos",n3:"Método",n4:"Hablemos",tag:"Estudio de IA y software a medida",h1a:"Convertimos ideas en",h1b:"sistemas inteligentes",sub:"Diseñamos y construimos agentes de voz, plataformas SaaS y automatización con IA para empresas que quieren operar más rápido, con menos fricción.",c1:"Cuéntanos tu proyecto",c2:"Ver lo que hemos construido",s_e:"Qué hacemos",s_h:"Del problema al producto en producción.",s_p:"Somos el equipo técnico que tu empresa no tiene que contratar. Estrategia, diseño e ingeniería bajo un mismo techo.",b1h:"Agentes de voz con IA",b1p:"Asistentes telefónicos que atienden llamadas, resuelven dudas, recogen reservas y traspasan a una persona cuando importa. Sin inventar datos, con todo registrado en un panel.",b2h:"Automatización",b2p:"Flujos que eliminan el trabajo repetitivo entre tus herramientas.",b3h:"Plataformas SaaS",b3p:"Productos multi-cliente, multi-idioma y listos para escalar.",b4h:"CRMs y paneles a medida",b4p:"Software interno que encaja con tu forma real de trabajar: clientes, obras, archivos, cobros y métricas en un solo sitio, no en diez hojas de cálculo.",b5h:"IA aplicada a tu negocio",b5p:"Transcripción, extracción de datos, clasificación y asistentes que trabajan con tu información, con revisión humana donde hace falta.",b6h:"Web y producto digital",b6p:"Webs rápidas, apps móviles (PWA) y experiencias con diseño cuidado, en varios idiomas desde el primer día.",w_e:"Proyectos",w_h:"Construimos nuestros propios productos. Por eso sabemos hacer los tuyos.",w1:"Presupuestos y facturas para constructores y reformistas a partir de una nota de voz. Facturación electrónica europea, empezando por Francia.",w2:"Agente telefónico para hoteles que atiende lo que recepción no puede coger: dudas, reservas y quejas, con traspaso a humano.",w3:"CRM para entrenadores personales con marca blanca, asistente de ayuda y web de venta propia.",w4:"Portal para talleres: gestión de trabajos, deuda por taller, PDFs e integraciones con Google Calendar y Drive.",w5:"Gestor para un taller de reprogramación de centralitas: archivos por marca, modelo y ECU, versiones y detección automática.",p_e:"Cómo trabajamos",p_h:"Rápidos, claros y sin humo.",p1h:"Descubrir",p1p:"Entendemos tu negocio, el problema real y qué merece automatizarse.",p2h:"Diseñar",p2p:"Definimos alcance, flujo y prototipo antes de escribir código.",p3h:"Construir",p3p:"Entregas cortas y funcionales. Ves avances reales cada semana.",p4h:"Lanzar y evolucionar",p4p:"Puesta en producción, medición y mejora continua.",k_e:"Contacto",k_h:"¿Tienes algo en mente?",k_p:"Cuéntanos qué quieres resolver. Te respondemos en menos de 24 horas laborables.",f1:"Nombre",f2:"Email",f3:"Empresa",f4:"¿Qué necesitas?",f5:"Enviar mensaje",ok:"¡Recibido! Te escribimos pronto.",err:"No se pudo enviar. Escríbenos a info@zxconsulting.solutions",foot:"Hecho con IA y mucho café.",mq:["Agentes de voz","Automatización","SaaS","CRM a medida","IA aplicada","Facturación electrónica","Integraciones","PWA"]},
+en:{n1:"Services",n2:"Work",n3:"Process",n4:"Let's talk",tag:"AI & custom software studio",h1a:"We turn ideas into",h1b:"intelligent systems",sub:"We design and build voice agents, SaaS platforms and AI automation for companies that want to operate faster, with less friction.",c1:"Tell us about your project",c2:"See what we've built",s_e:"What we do",s_h:"From problem to production.",s_p:"We're the technical team your company doesn't have to hire. Strategy, design and engineering under one roof.",b1h:"AI voice agents",b1p:"Phone assistants that answer calls, resolve questions, take bookings and hand over to a person when it matters. No invented data, everything logged in a dashboard.",b2h:"Automation",b2p:"Workflows that remove repetitive work between your tools.",b3h:"SaaS platforms",b3p:"Multi-tenant, multi-language products ready to scale.",b4h:"Custom CRMs & dashboards",b4p:"Internal software that fits how you really work: clients, jobs, files, payments and metrics in one place, not ten spreadsheets.",b5h:"AI applied to your business",b5p:"Transcription, data extraction, classification and assistants working with your own information, with human review where it counts.",b6h:"Web & digital product",b6p:"Fast websites, mobile apps (PWA) and carefully designed experiences, multilingual from day one.",w_e:"Work",w_h:"We build our own products. That's why we know how to build yours.",w1:"Quotes and invoices for builders and renovators from a voice note. European e-invoicing, starting with France.",w2:"Phone agent for hotels that handles what reception can't pick up: questions, bookings and complaints, with human handover.",w3:"CRM for personal trainers with white-label branding, a help assistant and its own sales site.",w4:"Garage portal: job management, per-garage balances, PDFs and Google Calendar and Drive integrations.",w5:"Manager for an ECU remapping shop: files by make, model and ECU, versions and automatic detection.",p_e:"How we work",p_h:"Fast, clear, no fluff.",p1h:"Discover",p1p:"We understand your business, the real problem and what deserves automating.",p2h:"Design",p2p:"We define scope, flow and prototype before writing code.",p3h:"Build",p3p:"Short, working deliveries. You see real progress every week.",p4h:"Launch & evolve",p4p:"Go live, measure and keep improving.",k_e:"Contact",k_h:"Got something in mind?",k_p:"Tell us what you want to solve. We reply within 24 business hours.",f1:"Name",f2:"Email",f3:"Company",f4:"What do you need?",f5:"Send message",ok:"Received! We'll write back soon.",err:"Could not send. Email us at info@zxconsulting.solutions",foot:"Made with AI and a lot of coffee.",mq:["Voice agents","Automation","SaaS","Custom CRM","Applied AI","E-invoicing","Integrations","PWA"]}
+};
+let L=localStorage.getItem('zxl')||((navigator.language||'es').startsWith('es')?'es':'en');
+function setLang(l){L=l;localStorage.setItem('zxl',l);document.documentElement.lang=l;
+ document.querySelectorAll('[data-i18n]').forEach(e=>e.textContent=T[l][e.dataset.i18n]);
+ document.querySelectorAll('[data-ph]').forEach(e=>e.placeholder=T[l][e.dataset.ph]);
+ document.getElementById('lang').textContent=l==='es'?'EN':'ES';
+ const m=T[l].mq.map(x=>`<span>${x}</span>`).join('');document.getElementById('mq').innerHTML=m+m}
+document.getElementById('lang').onclick=()=>setLang(L==='es'?'en':'es');
+setLang(L);document.getElementById('y').textContent=new Date().getFullYear();
+// nav
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>30),{passive:true});
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach((e,i)=>{e.style.transitionDelay=(i%4)*70+'ms';io.observe(e)});
+// card spotlight
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}));
+// network canvas
+(function(){const cv=document.getElementById('net'),x=cv.getContext('2d');let W,H,P=[],m={x:-999,y:-999};
+ const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ function rs(){const d=devicePixelRatio||1;W=cv.clientWidth;H=cv.clientHeight;cv.width=W*d;cv.height=H*d;x.setTransform(d,0,0,d,0,0);
+  const n=Math.min(110,Math.floor(W*H/14000));P=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35}))}
+ addEventListener('resize',rs);rs();
+ cv.parentElement.addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();m.x=e.clientX-r.left;m.y=e.clientY-r.top});
+ cv.parentElement.addEventListener('pointerleave',()=>m.x=m.y=-999);
+ function f(){x.clearRect(0,0,W,H);
+  for(const p of P){if(!reduce){p.x+=p.vx;p.y+=p.vy}if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+   const dx=p.x-m.x,dy=p.y-m.y,d=Math.hypot(dx,dy);if(d<140&&!reduce){p.x+=dx/d*1.4;p.y+=dy/d*1.4}
+   x.fillStyle='rgba(0,229,255,.85)';x.beginPath();x.arc(p.x,p.y,1.6,0,6.3);x.fill()}
+  for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const a=P[i],b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+   if(d<130){x.strokeStyle=`rgba(124,92,255,${.34*(1-d/130)})`;x.lineWidth=1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
+  for(const p of P){const d=Math.hypot(p.x-m.x,p.y-m.y);if(d<170){x.strokeStyle=`rgba(255,79,216,${.5*(1-d/170)})`;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}}
+  requestAnimationFrame(f)}f()})();
+// form
+document.getElementById('f').addEventListener('submit',async e=>{e.preventDefault();const f=e.target,s=document.getElementById('msg');s.textContent='…';
+ try{const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+  if(!r.ok)throw 0;s.textContent=T[L].ok;f.reset()}catch(_){s.textContent=T[L].err}});
+</script>
+</body>
+</html>
