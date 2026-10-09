@@ -7,8 +7,7 @@ Cada `git push` a `main` sube los archivos vía GitHub Actions (`.github/workflo
 
 ### Pasos (una sola vez)
 1. **IONOS → Hosting → SFTP y SSH**: copia servidor, usuario y contraseña SFTP.
-2. **IONOS → Dominios**: comprueba qué carpeta del webspace apunta a `zxconsulting.solutions`
-   y ponla en `remote_path` del workflow (ahora `./zxconsulting/`, es un valor provisional).
+2. La carpeta del dominio en IONOS es `/public` (ya puesta en el workflow).
 3. Crea un repo en GitHub y súbelo:
    ```bash
    git init -b main && git add . && git commit -m "Web inicial"
