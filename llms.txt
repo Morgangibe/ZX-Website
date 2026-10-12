@@ -1,6 +1,6 @@
 # ZX Consulting Solutions
 
-> Estudio de IA, software a medida y diseño web (ZX Consulting LLC, New Mexico, USA). Contacto: info@zxconsulting.solutions
+> Estudio de IA, software a medida y diseño web (ZX Consulting LLC, New Mexico, USA). Contacto: admin@zxconsulting.solutions
 
 ## Qué hacemos
 - Agentes de voz con IA para atención telefónica (hoteles y otros negocios), con traspaso a una persona.

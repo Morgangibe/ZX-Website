@@ -4,8 +4,9 @@ Web estática (`index.html`), sin build. Publicada con **GitHub Pages** en https
 (HTTPS gratuito y automático). Cada push a `main` publica la web.
 
 ## Formulario de contacto
-Usa FormSubmit (`https://formsubmit.co/ajax/info@zxconsulting.solutions`). La primera vez que alguien
-lo envíe llegará un correo de activación a `info@zxconsulting.solutions`: hay que confirmarlo una vez.
+Usa FormSubmit (`https://formsubmit.co/ajax/admin@zxconsulting.solutions`). La primera vez que alguien
+lo envíe llegará un correo de activación a `admin@zxconsulting.solutions`: hay que confirmarlo una vez
+(hasta entonces no llegan mensajes).
 
 ## DNS (en IONOS → Dominios → zxconsulting.solutions → DNS)
 - 4 registros **A** para `@` (sin tocar los MX del correo):
@@ -28,5 +29,5 @@ y JSON-LD (ProfessionalService) para buscadores y asistentes de IA.
 páginas y banner de consentimiento (`site.js` + `site.css`, preferencia en `localStorage['zx-consent']`, caduca a los 12 meses).
 Los textos legales son **borrador pendiente de revisión por abogado**; los datos que faltan aparecen resaltados como
 PENDIENTE/PENDING. Si se añade analítica o publicidad, debe cargarse solo cuando `zxConsent.has('analytics'|'marketing')`
-sea verdadero (`zxConsent.onChange(fn)` avisa de cambios). Las páginas internas son estáticas; el generador usado vive
-fuera del repo (`empresas/zx/web/tools/gen_pages.py`), edita los HTML directamente si prefieres.
+sea verdadero (`zxConsent.onChange(fn)` avisa de cambios). Las páginas internas son HTML estático: se editan
+directamente (el generador anterior está retirado y ya no refleja el contenido).
