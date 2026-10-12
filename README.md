@@ -22,3 +22,11 @@ Custom domain: `zxconsulting.solutions` y marcar **Enforce HTTPS** cuando esté 
 rotuladas como tal. Todo el texto está en el objeto `T` (es/en) al inicio del script. El formulario envía
 `service` (servicio de interés) además de nombre, email, empresa y mensaje. También: `robots.txt`, `sitemap.xml`, `llms.txt`
 y JSON-LD (ProfessionalService) para buscadores y asistentes de IA.
+
+## Páginas legales y de contacto (borrador)
+`aviso-legal.html`, `privacidad.html`, `cookies.html`, `condiciones.html` y `contacto.html`, con pie común en todas las
+páginas y banner de consentimiento (`site.js` + `site.css`, preferencia en `localStorage['zx-consent']`, caduca a los 12 meses).
+Los textos legales son **borrador pendiente de revisión por abogado**; los datos que faltan aparecen resaltados como
+PENDIENTE/PENDING. Si se añade analítica o publicidad, debe cargarse solo cuando `zxConsent.has('analytics'|'marketing')`
+sea verdadero (`zxConsent.onChange(fn)` avisa de cambios). Las páginas internas son estáticas; el generador usado vive
+fuera del repo (`empresas/zx/web/tools/gen_pages.py`), edita los HTML directamente si prefieres.

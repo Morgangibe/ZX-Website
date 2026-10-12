@@ -12,3 +12,10 @@
 - Dintel: presupuestos y facturas para el sector de la construcción a partir de una nota de voz.
 - Trainbay: CRM con IA para entrenadores personales.
 - Hotel Voice Agent: agente telefónico para hoteles.
+
+## Información legal y contacto
+- Aviso legal: https://zxconsulting.solutions/aviso-legal.html
+- Política de privacidad: https://zxconsulting.solutions/privacidad.html
+- Política de cookies: https://zxconsulting.solutions/cookies.html
+- Condiciones de uso: https://zxconsulting.solutions/condiciones.html
+- Contacto: https://zxconsulting.solutions/contacto.html

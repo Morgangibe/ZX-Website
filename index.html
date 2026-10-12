@@ -10,7 +10,13 @@
 <meta property="og:description" content="Diseñamos y construimos IA, software y webs a medida. Prueba las demos interactivas de nuestros productos.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zxconsulting.solutions/">
+<meta property="og:image" content="https://zxconsulting.solutions/brand/png/logo-lockup-dark.png">
+<meta property="og:site_name" content="ZX Consulting Solutions">
+<meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#fcb800">
+<link rel="icon" type="image/png" sizes="64x64" href="brand/png/logo-mark-64.png">
+<link rel="apple-touch-icon" href="brand/png/logo-mark-256.png">
+<link rel="stylesheet" href="site.css">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23fcb800'/%3E%3Cg fill='none' stroke='%230b0b0b' stroke-width='6.5' stroke-linejoin='miter' stroke-miterlimit='10'%3E%3Cpath d='M16 17h32L16 47h32'/%3E%3Cpath d='M16 17l9.5 9.5M38.5 37.5 48 47'/%3E%3C/g%3E%3C/svg%3E">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ZX Consulting Solutions","legalName":"ZX Consulting LLC","url":"https://zxconsulting.solutions/","email":"info@zxconsulting.solutions","areaServed":"Worldwide","knowsLanguage":["es","en"],"description":"Estudio de IA, software a medida y diseño web: agentes de voz, plataformas SaaS, CRMs, automatización y creación de páginas web.","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Agentes de voz con IA"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diseño y creación de páginas web"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"CRMs y plataformas SaaS a medida"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automatización con IA"}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -196,8 +202,8 @@ textarea{min-height:120px;resize:vertical}
 .mail{margin-top:30px;display:inline-block;font:600 clamp(16px,4.6vw,22px) 'Space Grotesk';overflow-wrap:anywhere;border-bottom:1px solid var(--c2)}
 @media(max-width:900px){.contact{grid-template-columns:minmax(0,1fr)}}
 .contact>*,form{min-width:0}
-footer{padding:40px 0;color:var(--mut);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.priv{font-size:13px;color:var(--mut);margin-top:-2px}
+.priv a{text-decoration:underline;text-underline-offset:3px}
 /* reveal */
 .rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -397,18 +403,54 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
       <textarea name="message" required data-ph="f4" placeholder="¿Qué necesitas?" aria-label="Mensaje"></textarea>
       <button class="btn p" type="submit" style="justify-content:center"><span data-i18n="f5">Enviar mensaje</span> →</button>
       <div id="msg" role="status"></div>
+      <p class="priv" data-i18n-html="priv">Al enviar el formulario tratamos tus datos para responderte, según nuestra <a href="privacidad.html">política de privacidad</a>.</p>
     </form>
   </div>
 </div></section>
 
-<footer class="t-d"><div class="wrap">
-  <span>© <span id="y"></span> ZX Consulting LLC · New Mexico, USA</span>
-  <span data-i18n="foot">Hecho con IA y mucho café.</span>
+<footer class="sf" id="footer"><div class="wrap">
+  <div class="sf-grid">
+    <div>
+      <a class="logo" href="#top"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#fcb800"/><g fill="none" stroke="#0b0b0b" stroke-width="6.5" stroke-linejoin="miter" stroke-miterlimit="10"><path d="M16 17h32L16 47h32"/><path d="M16 17l9.5 9.5M38.5 37.5 48 47"/></g></svg>ZX Consulting <small>.solutions</small></a>
+      <p data-zs="f_about">Estudio de IA, software y diseño web a medida.</p>
+      <p>ZX Consulting LLC · New Mexico, USA</p>
+    </div>
+    <div role="navigation" aria-label="Navegación / Navigation">
+      <h2 data-zs="f_nav">Navegación</h2>
+      <ul>
+        <li><a href="#demos" data-zs="n_demos">Demos</a></li>
+        <li><a href="#services" data-zs="n_services">Servicios</a></li>
+        <li><a href="#webs" data-zs="n_webs">Diseño web</a></li>
+        <li><a href="#work" data-zs="n_work">Proyectos</a></li>
+        <li><a href="#process" data-zs="n_process">Método</a></li>
+        <li><a href="#contact" data-zs="n_contact">Formulario de contacto</a></li>
+      </ul>
+    </div>
+    <div role="navigation" aria-label="Legal">
+      <h2 data-zs="f_legal">Legal</h2>
+      <ul>
+        <li><a href="aviso-legal.html" data-zs="l_aviso">Aviso legal</a></li>
+        <li><a href="privacidad.html" data-zs="l_priv">Política de privacidad</a></li>
+        <li><a href="cookies.html" data-zs="l_cook">Política de cookies</a></li>
+        <li><a href="condiciones.html" data-zs="l_cond">Condiciones de uso</a></li>
+        <li><button type="button" class="lk" data-cookie-settings data-zs="l_cookset">Configurar cookies</button></li>
+      </ul>
+    </div>
+    <div>
+      <h2 data-zs="f_contact">Contacto</h2>
+      <ul>
+        <li><a href="mailto:info@zxconsulting.solutions">info@zxconsulting.solutions</a></li>
+        <li><a href="contacto.html" data-zs="l_contact">Datos de contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="sf-bot"><span>© <span class="js-year">2026</span> ZX Consulting LLC · <span data-zs="rights">Todos los derechos reservados.</span></span></div>
 </div></footer>
 
+<script src="site.js"></script>
 <script>
 const T={
-es:{n1:"Servicios",n4:"Hablemos",n5:"Demos",n6:"Webs",n3:"Método",tag:"Estudio de IA y software a medida",h1a:"Convertimos ideas en",h1b:"sistemas inteligentes",sub:"Diseñamos y construimos agentes de voz, plataformas SaaS, automatización con IA y webs a medida para empresas que quieren operar más rápido, con menos fricción.",c1:"Cuéntanos tu proyecto",c2:"Prueba las demos",
+es:{priv:'Al enviar el formulario tratamos tus datos para responderte, según nuestra <a href="privacidad.html">política de privacidad</a>.',n1:"Servicios",n4:"Hablemos",n5:"Demos",n6:"Webs",n3:"Método",tag:"Estudio de IA y software a medida",h1a:"Convertimos ideas en",h1b:"sistemas inteligentes",sub:"Diseñamos y construimos agentes de voz, plataformas SaaS, automatización con IA y webs a medida para empresas que quieren operar más rápido, con menos fricción.",c1:"Cuéntanos tu proyecto",c2:"Prueba las demos",
 d_e:"Demos interactivas",d_h:"No te lo contamos. Pruébalo.",d_p:"Estos son nuestros propios productos. Cada ventana es una simulación con datos ficticios que puedes tocar.",demo:"Demo · datos ficticios",t_voice:"Agente de voz",t_web:"Tu web",reset:"Reiniciar",
 pitch_dintel:"Dintel convierte una nota de voz en un presupuesto listo para firmar y, después, en factura. Dicta una nota y míralo.",pitch_trainbay:"Trainbay es un CRM con IA para entrenadores personales: pipeline de clientes y un asistente que sabe en qué punto está cada uno.",pitch_voice:"Un agente telefónico para hoteles: atiende en varios idiomas, recoge la reserva y traspasa a una persona cuando hace falta.",pitch_web:"Así diseñamos webs: cambia el estilo, el color y la vista móvil y mira cómo responde. Tu web real será a medida.",
 di_h1:"Nota de voz",di_h2:"Presupuesto",di_go:"▶ Dictar nota",di_note:"La IA solo usa precios de tu propia biblioteca. Tú revisas antes de enviar.",di_tr:"Reforma de baño en el segundo B: quitar la bañera, poner plato de ducha de 120, alicatar 18 metros cuadrados y cambiar las tomas de fontanería.",
@@ -422,7 +464,7 @@ k1h:"Landing",k1p:"Una página que convierte: ideal para un servicio, un lanzami
 w_e:"Proyectos",w_h:"Construimos nuestros propios productos. Por eso sabemos hacer los tuyos.",w1:"Presupuestos y facturas para constructores y reformistas a partir de una nota de voz. Facturación electrónica europea, empezando por Francia.",w2:"Agente telefónico para hoteles que atiende lo que recepción no puede coger: dudas, reservas y quejas, con traspaso a humano.",w3:"CRM para entrenadores personales con marca blanca, asistente de ayuda y web de venta propia.",
 p_e:"Cómo trabajamos",p_h:"Rápidos, claros y sin humo.",p1h:"Descubrir",p1p:"Entendemos tu negocio, el problema real y qué merece automatizarse.",p2h:"Diseñar",p2p:"Definimos alcance, flujo y prototipo antes de escribir código.",p3h:"Construir",p3p:"Entregas cortas y funcionales. Ves avances reales cada semana.",p4h:"Lanzar y evolucionar",p4p:"Puesta en producción, medición y mejora continua.",
 k_e:"Contacto",k_h:"¿Tienes algo en mente?",k_p:"Cuéntanos qué quieres resolver. Te respondemos en menos de 24 horas laborables.",f1:"Nombre",f2:"Email",f3:"Empresa",f4:"¿Qué necesitas?",f5:"Enviar mensaje",o0:"Servicio de interés (opcional)",o1:"Web · Landing",o2:"Web · Corporativa",o3:"Web · Tienda online",o4:"Agente de voz con IA",o5:"Software / CRM / SaaS a medida",o6:"Automatización / IA aplicada",ok:"¡Recibido! Te escribimos pronto.",err:"No se pudo enviar. Escríbenos a info@zxconsulting.solutions",foot:"Hecho con IA y mucho café.",mq:["Agentes de voz","Automatización","SaaS","CRM a medida","IA aplicada","Facturación electrónica","Integraciones","Diseño web"]},
-en:{n1:"Services",n4:"Let's talk",n5:"Demos",n6:"Web",n3:"Process",tag:"AI & custom software studio",h1a:"We turn ideas into",h1b:"intelligent systems",sub:"We design and build voice agents, SaaS platforms, AI automation and custom websites for companies that want to operate faster, with less friction.",c1:"Tell us about your project",c2:"Try the demos",
+en:{priv:'By submitting the form we process your data to reply to you, as described in our <a href="privacidad.html">privacy policy</a>.',n1:"Services",n4:"Let's talk",n5:"Demos",n6:"Web",n3:"Process",tag:"AI & custom software studio",h1a:"We turn ideas into",h1b:"intelligent systems",sub:"We design and build voice agents, SaaS platforms, AI automation and custom websites for companies that want to operate faster, with less friction.",c1:"Tell us about your project",c2:"Try the demos",
 d_e:"Interactive demos",d_h:"We won't just tell you. Try it.",d_p:"These are our own products. Every window is a simulation with fictional data that you can touch.",demo:"Demo · fictional data",t_voice:"Voice agent",t_web:"Your website",reset:"Reset",
 pitch_dintel:"Dintel turns a voice note into a quote ready to sign and then into an invoice. Dictate a note and watch.",pitch_trainbay:"Trainbay is an AI CRM for personal trainers: a client pipeline and an assistant that knows where everyone stands.",pitch_voice:"A phone agent for hotels: it answers in several languages, takes the booking and hands over to a person when needed.",pitch_web:"This is how we design websites: change the style, colour and mobile view and see it respond. Your real site will be custom-built.",
 di_h1:"Voice note",di_h2:"Quote",di_go:"▶ Dictate note",di_note:"The AI only uses prices from your own library. You review before sending.",di_tr:"Bathroom renovation in flat 2B: remove the bathtub, fit a 120 shower tray, tile 18 square metres and replace the plumbing connections.",
@@ -448,7 +490,9 @@ let cur='dintel';
 
 function setLang(l){L=l;localStorage.setItem('zxl',l);document.documentElement.lang=l;
  document.querySelectorAll('[data-i18n]').forEach(e=>{const v=T[l][e.dataset.i18n];if(typeof v==='string')e.textContent=v});
+ document.querySelectorAll('[data-i18n-html]').forEach(e=>{e.innerHTML=T[l][e.dataset.i18nHtml]});
  document.querySelectorAll('[data-ph]').forEach(e=>{e.placeholder=T[l][e.dataset.ph];e.setAttribute('aria-label',T[l][e.dataset.ph])});
+ if(window.zxApply)zxApply(l);
  $('lang').textContent=l==='es'?'EN':'ES';
  const m=T[l].mq.map(x=>`<span>${x}</span>`).join('');$('mq').innerHTML=m+m;
  $('pitch').textContent=t('pitch_'+cur);
@@ -557,7 +601,7 @@ document.querySelector('#p-web').addEventListener('click',e=>{const b=e.target.c
 /* package -> contact */
 document.querySelectorAll('[data-svc]').forEach(b=>b.addEventListener('click',()=>{$('svc').value=b.dataset.svc;$('contact').scrollIntoView({behavior:reduce?'auto':'smooth'})}));
 
-setLang(L);$('url').textContent=URLS.dintel;$('y').textContent=new Date().getFullYear();
+setLang(L);$('url').textContent=URLS.dintel;
 // nav
 const nav=$('nav');addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>30),{passive:true});
 // reveal
