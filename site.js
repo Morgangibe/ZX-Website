@@ -37,7 +37,7 @@ function apply(l){
  document.documentElement.lang=L;
  var n=document.querySelectorAll('[data-zs]');
  for(var i=0;i<n.length;i++){var v=D[L][n[i].getAttribute('data-zs')];if(v!==undefined){if(n[i].hasAttribute('data-zs-html'))n[i].innerHTML=v;else n[i].textContent=v}}
- var b=document.getElementById('lang');if(b&&document.body.hasAttribute('data-pg'))b.textContent=L==='es'?'EN':'ES';
+ var b=document.getElementById('lang');if(b&&document.body.hasAttribute('data-pg')){b.textContent=L==='es'?'EN':'ES';b.setAttribute('aria-label',L==='es'?'EN · Cambiar idioma a inglés':'ES · Switch language to Spanish')}
  var tt=document.body.getAttribute('data-t-'+L);if(tt)document.title=tt;
  var y=document.querySelectorAll('.js-year');for(var j=0;j<y.length;j++)y[j].textContent=new Date().getFullYear();
  renderBanner();

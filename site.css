@@ -24,7 +24,6 @@
 /* aviso de borrador */
 .draft{background:rgba(252,184,0,.1);border:1px solid rgba(252,184,0,.45);color:var(--c3);border-radius:14px;padding:14px 18px;font-size:15px;margin:34px 0 0}
 .draft b{color:var(--c1)}
-mark.todo{background:rgba(252,184,0,.18);color:var(--c3);border:1px dashed rgba(252,184,0,.6);border-radius:6px;padding:0 6px;font-style:normal}
 /* cuerpo legal */
 .doc{padding:56px 0 90px;max-width:820px}
 .doc h1{font-size:clamp(34px,5vw,54px);font-weight:700;margin:0 0 8px}

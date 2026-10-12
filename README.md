@@ -24,10 +24,10 @@ rotuladas como tal. Todo el texto está en el objeto `T` (es/en) al inicio del s
 `service` (servicio de interés) además de nombre, email, empresa y mensaje. También: `robots.txt`, `sitemap.xml`, `llms.txt`
 y JSON-LD (ProfessionalService) para buscadores y asistentes de IA.
 
-## Páginas legales y de contacto (borrador)
+## Páginas legales y de contacto
 `aviso-legal.html`, `privacidad.html`, `cookies.html`, `condiciones.html` y `contacto.html`, con pie común en todas las
 páginas y banner de consentimiento (`site.js` + `site.css`, preferencia en `localStorage['zx-consent']`, caduca a los 12 meses).
-Los textos legales son **borrador pendiente de revisión por abogado**; los datos que faltan aparecen resaltados como
-PENDIENTE/PENDING. Si se añade analítica o publicidad, debe cargarse solo cuando `zxConsent.has('analytics'|'marketing')`
+Los textos legales son informativos (no asesoramiento legal) y llevan los datos oficiales de la LLC; se recomienda
+revisión por abogado antes de darlos por definitivos. Si se añade analítica o publicidad, debe cargarse solo cuando `zxConsent.has('analytics'|'marketing')`
 sea verdadero (`zxConsent.onChange(fn)` avisa de cambios). Las páginas internas son HTML estático: se editan
 directamente (el generador anterior está retirado y ya no refleja el contenido).

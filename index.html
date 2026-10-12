@@ -208,9 +208,11 @@ textarea{min-height:120px;resize:vertical}
 .rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.qrow,.b{opacity:1;transform:none}html{scroll-behavior:auto}}
+.skip{position:absolute;left:-9999px;top:8px;background:#fcb800;color:#0b0b0b;padding:10px 16px;border-radius:8px;font-weight:600;z-index:200}.skip:focus{left:8px}
 </style>
 </head>
 <body>
+<a class="skip" href="#main" id="skip">Saltar al contenido</a>
 <nav id="nav" class="t-y"><div class="wrap nav">
   <a href="#top" class="logo"><svg class="mk" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--grad)"/><g fill="none" stroke="var(--btnt)" stroke-width="6.5" stroke-linejoin="miter" stroke-miterlimit="10"><path d="M16 17h32L16 47h32"/><path d="M16 17l9.5 9.5M38.5 37.5 48 47"/></g></svg>ZX Consulting <small>.solutions</small></a>
   <div class="links">
@@ -218,11 +220,12 @@ textarea{min-height:120px;resize:vertical}
     <a href="#services" data-i18n="n1">Servicios</a>
     <a href="#webs" data-i18n="n6">Webs</a>
     <a href="#process" data-i18n="n3">Método</a>
-    <button class="lang" id="lang" aria-label="Language">EN</button>
+    <button class="lang" id="lang" aria-label="EN · Cambiar idioma a inglés">EN</button>
     <a href="#contact" class="btn p" style="padding:10px 20px;font-size:15px" data-i18n="n4">Hablemos</a>
   </div>
 </div></nav>
 
+<main id="main">
 <header class="hero t-y" id="top">
   <canvas id="net" aria-hidden="true"></canvas>
   <div class="wrap">
@@ -407,6 +410,7 @@ textarea{min-height:120px;resize:vertical}
     </form>
   </div>
 </div></section>
+</main>
 
 <footer class="sf" id="footer"><div class="wrap">
   <div class="sf-grid">
@@ -479,7 +483,7 @@ w_e:"Work",w_h:"We build our own products. That's why we know how to build yours
 p_e:"How we work",p_h:"Fast, clear, no fluff.",p1h:"Discover",p1p:"We understand your business, the real problem and what deserves automating.",p2h:"Design",p2p:"We define scope, flow and prototype before writing code.",p3h:"Build",p3p:"Short, working deliveries. You see real progress every week.",p4h:"Launch & evolve",p4p:"Go live, measure and keep improving.",
 k_e:"Contact",k_h:"Got something in mind?",k_p:"Tell us what you want to solve. We reply within 24 business hours.",f1:"Name",f2:"Email",f3:"Company",f4:"What do you need?",f5:"Send message",o0:"Service of interest (optional)",o1:"Web · Landing page",o2:"Web · Corporate site",o3:"Web · Online store",o4:"AI voice agent",o5:"Custom software / CRM / SaaS",o6:"Automation / applied AI",ok:"Received! We'll write back soon.",err:"Could not send. Email us at admin@zxconsulting.solutions",foot:"Made with AI and a lot of coffee.",mq:["Voice agents","Automation","SaaS","Custom CRM","Applied AI","E-invoicing","Integrations","Web design"]}
 };
-let L=localStorage.getItem('zxl')||((navigator.language||'es').startsWith('es')?'es':'en');
+let L=(()=>{try{return localStorage.getItem('zxl')}catch(e){return null}})()||((navigator.language||'es').startsWith('es')?'es':'en');
 const $=id=>document.getElementById(id),t=k=>T[L][k];
 const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 const sleep=ms=>new Promise(r=>setTimeout(r,reduce?0:ms));
@@ -488,12 +492,12 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 const URLS={dintel:'dintel.eu / presupuestos',trainbay:'app.trainbay.app / pipeline',voice:'panel / llamadas',web:'tu-negocio.com'};
 let cur='dintel';
 
-function setLang(l){L=l;localStorage.setItem('zxl',l);document.documentElement.lang=l;
+function setLang(l){L=l;try{localStorage.setItem('zxl',l)}catch(e){}document.documentElement.lang=l;
  document.querySelectorAll('[data-i18n]').forEach(e=>{const v=T[l][e.dataset.i18n];if(typeof v==='string')e.textContent=v});
  document.querySelectorAll('[data-i18n-html]').forEach(e=>{e.innerHTML=T[l][e.dataset.i18nHtml]});
  document.querySelectorAll('[data-ph]').forEach(e=>{e.placeholder=T[l][e.dataset.ph];e.setAttribute('aria-label',T[l][e.dataset.ph])});
  if(window.zxApply)zxApply(l);
- $('lang').textContent=l==='es'?'EN':'ES';
+ $('lang').textContent=l==='es'?'EN':'ES';$('lang').setAttribute('aria-label',l==='es'?'EN · Cambiar idioma a inglés':'ES · Switch language to Spanish');$('skip').textContent=l==='es'?'Saltar al contenido':'Skip to content';
  const m=T[l].mq.map(x=>`<span>${x}</span>`).join('');$('mq').innerHTML=m+m;
  $('pitch').textContent=t('pitch_'+cur);
  diReset();tbInit();vaInit();wbInit()}
