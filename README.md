@@ -16,3 +16,9 @@ lo envíe llegará un correo de activación a `info@zxconsulting.solutions`: hay
 ## GitHub
 Settings → Pages → Source: *Deploy from a branch* → `main` / `(root)`.
 Custom domain: `zxconsulting.solutions` y marcar **Enforce HTTPS** cuando esté disponible.
+
+## Secciones y demos
+`index.html` incluye 4 demos interactivas (Dintel, Trainbay, Agente de voz, Configurador web) con datos ficticios,
+rotuladas como tal. Todo el texto está en el objeto `T` (es/en) al inicio del script. El formulario envía
+`service` (servicio de interés) además de nombre, email, empresa y mensaje. También: `robots.txt`, `sitemap.xml`, `llms.txt`
+y JSON-LD (ProfessionalService) para buscadores y asistentes de IA.

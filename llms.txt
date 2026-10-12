@@ -1,0 +1,14 @@
+# ZX Consulting Solutions
+
+> Estudio de IA, software a medida y diseño web (ZX Consulting LLC, New Mexico, USA). Contacto: info@zxconsulting.solutions
+
+## Qué hacemos
+- Agentes de voz con IA para atención telefónica (hoteles y otros negocios), con traspaso a una persona.
+- CRMs, paneles y plataformas SaaS a medida.
+- Automatización e IA aplicada a procesos de negocio.
+- Diseño y creación de páginas web: landings, webs corporativas y tiendas online, multi-idioma y con SEO.
+
+## Productos propios
+- Dintel: presupuestos y facturas para el sector de la construcción a partir de una nota de voz.
+- Trainbay: CRM con IA para entrenadores personales.
+- Hotel Voice Agent: agente telefónico para hoteles.
