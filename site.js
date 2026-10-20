@@ -23,11 +23,21 @@ en:{skip:'Skip to content',home:'Back to home',
  ck_title:'Your privacy',ck_text:'We use technical storage that is strictly necessary for the site to work (language and your cookie choice). We do not load analytics or advertising without your permission. You can accept, reject or choose by category.',
  ck_more:'More information in the cookie policy',ck_accept:'Accept all',ck_reject:'Reject all',ck_config:'Customise',ck_save:'Save selection',
  ck_nec:'Necessary',ck_nec_d:'Chosen language and a record of your consent. Always on.',ck_ana:'Analytics',ck_ana_d:'Measure visits in aggregate. No analytics tool is used at the moment.',
- ck_mkt:'Marketing',ck_mkt_d:'Advertising and remarketing. Not used at the moment.',ck_on:'Always on',ck_label:'Cookie preferences'}
+ ck_mkt:'Marketing',ck_mkt_d:'Advertising and remarketing. Not used at the moment.',ck_on:'Always on',ck_label:'Cookie preferences'},
+fr:{skip:'Aller au contenu',home:"Retour à l'accueil",
+ f_about:"Studio d'IA, de logiciels et de conception web sur mesure.",f_nav:'Navigation',f_legal:'Mentions légales',f_contact:'Contact',
+ n_demos:'Démos',n_services:'Services',n_webs:'Conception web',n_work:'Projets',n_process:'Méthode',n_contact:'Formulaire de contact',
+ l_aviso:'Mentions légales',l_priv:'Politique de confidentialité',l_cook:'Politique de cookies',l_cond:"Conditions d'utilisation",l_contact:'Coordonnées',l_cookset:'Paramétrer les cookies',
+ rights:'Tous droits réservés.',
+ draft:'<b>Document informatif.</b> Ce texte décrit le fonctionnement de ZX Consulting LLC et ne constitue pas un conseil juridique. Les textes juridiques ne sont disponibles qu\'en espagnol et en anglais (ici en anglais).',
+ ck_title:'Votre vie privée',ck_text:"Nous utilisons un stockage technique strictement nécessaire au fonctionnement du site (langue et votre choix de cookies). Nous ne chargeons ni outil d'analyse ni publicité sans votre accord. Vous pouvez accepter, refuser ou choisir par catégorie.",
+ ck_more:'Plus d\'informations dans la politique de cookies',ck_accept:'Tout accepter',ck_reject:'Tout refuser',ck_config:'Personnaliser',ck_save:'Enregistrer la sélection',
+ ck_nec:'Nécessaires',ck_nec_d:'Langue choisie et enregistrement de votre consentement. Toujours actifs.',ck_ana:'Mesure d\'audience',ck_ana_d:'Mesurer les visites de façon agrégée. Aucun outil de mesure n\'est utilisé actuellement.',
+ ck_mkt:'Marketing',ck_mkt_d:'Publicité et remarketing. Non utilisé actuellement.',ck_on:'Toujours actifs',ck_label:'Préférences de cookies'}
 };
 var KEY='zx-consent',VER=1,MAXAGE=365*864e5;
 function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
-function curLang(){var s=store('zxl');if(s==='es'||s==='en')return s;return (navigator.language||'es').slice(0,2)==='es'?'es':'en'}
+function curLang(){var s=store('zxl');if(D[s])return s;var n=(navigator.language||'es').slice(0,2);return D[n]?n:'en'}
 var L=curLang();
 function tr(k){return D[L][k]}
 
@@ -37,7 +47,7 @@ function apply(l){
  document.documentElement.lang=L;
  var n=document.querySelectorAll('[data-zs]');
  for(var i=0;i<n.length;i++){var v=D[L][n[i].getAttribute('data-zs')];if(v!==undefined){if(n[i].hasAttribute('data-zs-html'))n[i].innerHTML=v;else n[i].textContent=v}}
- var b=document.getElementById('lang');if(b&&document.body.hasAttribute('data-pg')){b.textContent=L==='es'?'EN':'ES';b.setAttribute('aria-label',L==='es'?'EN · Cambiar idioma a inglés':'ES · Switch language to Spanish')}
+ var b=document.getElementById('lang');if(b&&document.body.hasAttribute('data-pg')){var nx={es:'en',en:'fr',fr:'es'}[L];b.textContent=nx.toUpperCase();b.setAttribute('aria-label',nx.toUpperCase()+' · '+({es:'Cambiar idioma',en:'Switch language',fr:'Changer de langue'})[L])}
  var tt=document.body.getAttribute('data-t-'+L);if(tt)document.title=tt;
  var y=document.querySelectorAll('.js-year');for(var j=0;j<y.length;j++)y[j].textContent=new Date().getFullYear();
  renderBanner();
@@ -125,7 +135,7 @@ function init(){
  var pg=document.body.hasAttribute('data-pg');
  if(pg){
   var b=document.getElementById('lang');
-  if(b)b.addEventListener('click',function(){var n=L==='es'?'en':'es';store('zxl',n);apply(n)});
+  if(b)b.addEventListener('click',function(){var n={es:'en',en:'fr',fr:'es'}[L];store('zxl',n);apply(n)});
  }
  var s=document.querySelectorAll('[data-cookie-settings]');
  for(var i=0;i<s.length;i++)s[i].addEventListener('click',function(){openBanner(true)});

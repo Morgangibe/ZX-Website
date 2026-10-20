@@ -45,7 +45,7 @@
 @media(max-width:560px){.card2 dl{grid-template-columns:1fr}.card2 dt{margin-top:8px}}
 .btn2{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:99px;font-weight:600;font-size:16px;background:var(--c1);color:var(--btnt)!important;text-decoration:none!important;border:0;cursor:pointer;font-family:Inter,system-ui,sans-serif}
 /* idioma: ambos textos están en el DOM, se oculta el que no toca */
-html[lang=es] [data-lang=en],html[lang=en] [data-lang=es]{display:none!important}
+html[lang=es] [data-lang=en],html[lang=en] [data-lang=es],html[lang=fr] [data-lang=es]{display:none!important}
 /* pie de página (compartido con index.html) */
 .sf{background:#0b0b0b;color:var(--mut);font-size:15px;padding:64px 0 28px;border-top:1px solid var(--line)}
 .sf .wrap{display:block}

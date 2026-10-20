@@ -20,7 +20,7 @@ Custom domain: `zxconsulting.solutions` y marcar **Enforce HTTPS** cuando esté 
 
 ## Secciones y demos
 `index.html` incluye 4 demos interactivas (Dintel, Trainbay, Agente de voz, Configurador web) con datos ficticios,
-rotuladas como tal. Todo el texto está en el objeto `T` (es/en) al inicio del script. El formulario envía
+rotuladas como tal. Todo el texto está en el objeto `T` (es/en/fr) al inicio del script. El formulario envía
 `service` (servicio de interés) además de nombre, email, empresa y mensaje. También: `robots.txt`, `sitemap.xml`, `llms.txt`
 y JSON-LD (ProfessionalService) para buscadores y asistentes de IA.
 
@@ -31,3 +31,6 @@ Los textos legales son informativos (no asesoramiento legal) y llevan los datos 
 revisión por abogado antes de darlos por definitivos. Si se añade analítica o publicidad, debe cargarse solo cuando `zxConsent.has('analytics'|'marketing')`
 sea verdadero (`zxConsent.onChange(fn)` avisa de cambios). Las páginas internas son HTML estático: se editan
 directamente (el generador anterior está retirado y ya no refleja el contenido).
+
+## Idiomas
+ES, EN y FR. Textos de la portada en `T` (index.html); pie, banner de cookies y chrome de las páginas internas en `D` (site.js). Las páginas legales solo tienen texto en ES y EN: en francés se muestra la versión inglesa con un aviso.
